@@ -1,4 +1,5 @@
-const removePaywall = () => {
+function removePaywall() {
+  console.log("Attempting to remove paywall...");
   var paywallWrapper = document.getElementById('paywall_wrapper');
   if (paywallWrapper) {
       paywallWrapper.remove();
@@ -14,7 +15,3 @@ const removePaywall = () => {
 }
 
 setTimeout(removePaywall, 1000);
-var paywallWrapper = document.getElementById('paywall_wrapper');
-if(paywallWrapper){ // run a second time if delayed
-  setTimeout(removePaywall, 5000);
-}
