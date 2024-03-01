@@ -3,7 +3,10 @@
   "name": "Blur Removal Extension",
   "version": "1.0",
   "description": "Removes blur effect from web pages",
-  "permissions": ["activeTab"],
+  "permissions": ["scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -12,5 +15,8 @@
   ],
   "action": {
     "default_icon": "bypass.png"
-  }
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ]
 }
